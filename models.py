@@ -27,8 +27,7 @@ class User(db.Model):
 
 
 event.listen(User.__table__,"after_create",
-DDL(" ALTER TABLE %(table)s ;")
-)
+DDL(" ALTER TABLE %(table)s AUTO_INCREMENT=1001;"))
 
 #one
 class Patient(db.Model):
